@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Rockaway.WebApp.Controllers {
 	public class TicketsController : Controller {
