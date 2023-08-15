@@ -1,0 +1,76 @@
+@use "sass:color";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,400&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+$radius: 8px;
+$brand-color: #369;
+$heading-font: 'Josefin Sans', sans-serif;
+$body-font: 'Titillium Web', sans-serif;
+$gutter: 20px;
+
+html {
+	background-color: #333;
+	font-family: $body-font;
+}
+body {
+	max-width: 960px;
+	margin: 0px auto;
+	color: #fff;
+	padding: 8px;
+
+	h1, h2 {
+		font-family: $heading-font;
+		color: $brand-color;
+	}
+}
+
+@mixin page-panel {
+	margin: 2px 0;
+	background-color: #000;
+	border-radius: $radius;
+	padding: 2px + $radius;
+}
+
+header {
+	@include page-panel;
+	nav {
+		a {
+			@include page-panel;
+			color: #000;
+			background-color: #369;
+			font-weight: bold;
+			padding: 4px 8px;
+			display: inline-block;
+			text-decoration: none;
+		}
+	}
+}
+main {
+	@include page-panel;
+}
+footer {
+	@include page-panel;
+}
+
+main > h1 {
+	margin-top: 8px;
+}
+
+div.artist-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: $gutter;
+	padding: $gutter;
+
+	section {
+		@include page-panel;
+		border: 1px solid #fff;
+		padding: $gutter/2;
+		box-sizing: border-box;
+		width: 30%;
+		@
+		flex-grow: 1;
+		background: rgb(2,0,36);
+		background: linear-gradient(160deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%, color.scale($brand-color, $lightness: -50%) 100%);
+	}
+}

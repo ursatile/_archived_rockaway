@@ -16,21 +16,22 @@ await conn.OpenAsync();
 builder.Services.AddDbContext<RockawayDbContext>(options => options
 	.UseLoggerFactory(loggerFactory)
 	.UseSqlite(SQLITE));
-//.UseSqlServer(SQL_CONNECTION_STRING));
 
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
+#if DEBUG
+builder.Services.AddSassCompiler();
+#endif
 var app = builder.Build();
 using (var scope = app.Services.CreateScope()) {
-	var db = scope.ServiceProvider.GetService<RockawayDbContext>();
+	var db = scope.ServiceProvider.GetService<RockawayDbContext>()!;
 	lock (db) {
 		var created = db.Database.EnsureCreated();
-		if (created) {
-			var populator = new SampleDataPopulator(db);
-			populator.PopulateSampleDataAsync().Wait();
-		}
+		if (created) SampleDataPopulator.PopulateSampleDataAsync(db).Wait();
 	}
 }
+
+app.UseStaticFiles();
 
 app.MapGet("/status", () => "Rockaway.WebApp is online.");
 app.MapRazorPages();

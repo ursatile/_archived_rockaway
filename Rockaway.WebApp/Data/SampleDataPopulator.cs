@@ -4,13 +4,8 @@ using Rockaway.WebApp.Data.Entities;
 namespace Rockaway.WebApp.Data;
 
 public class SampleDataPopulator {
-	private readonly RockawayDbContext dbc;
 
-	public SampleDataPopulator(RockawayDbContext dbc) {
-		this.dbc = dbc;
-	}
-
-	public async Task PopulateSampleDataAsync() {
+	public static async Task PopulateSampleDataAsync(RockawayDbContext dbc) {
 		await dbc.Artists.AddRangeAsync(Artists.AllArtists);
 		await dbc.Venues.AddRangeAsync(Venues.AllVenues);
 		await dbc.SaveChangesAsync();
