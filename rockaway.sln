@@ -3,17 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rockaway.WebApp", "Rockaway.WebApp\Rockaway.WebApp.csproj", "{53089A72-076E-4EF7-9EA8-AC8335593841}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rockaway.WebApp", "Rockaway.WebApp\Rockaway.WebApp.csproj", "{53089A72-076E-4EF7-9EA8-AC8335593841}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rockaway.WebApp.Tests", "Rockaway.WebApp.Tests\Rockaway.WebApp.Tests.csproj", "{6EEEE033-285A-43C7-8F88-DB61025D1514}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rockaway.WebApp.Tests", "Rockaway.WebApp.Tests\Rockaway.WebApp.Tests.csproj", "{6EEEE033-285A-43C7-8F88-DB61025D1514}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{53089A72-076E-4EF7-9EA8-AC8335593841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +21,11 @@ Global
 		{6EEEE033-285A-43C7-8F88-DB61025D1514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EEEE033-285A-43C7-8F88-DB61025D1514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EEEE033-285A-43C7-8F88-DB61025D1514}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38C74F82-3739-46FA-90A0-A24A32E429F8}
 	EndGlobalSection
 EndGlobal
