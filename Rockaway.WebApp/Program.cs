@@ -1,7 +1,14 @@
+using Microsoft.Data.Sqlite;
+using Rockaway.WebApp.Data;
+
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton(new StatusReporter());
+var conn = new SqliteConnection("Data Source=rockaway;Mode=Memory;Cache=Shared");
+await conn.OpenAsync();
+builder.Services.AddDbContext<RockawayDbContext>(options => options.UseSqlite(conn));
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rockaway.WebApp", "Rockaway
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rockaway.WebApp.Tests", "Rockaway.WebApp.Tests\Rockaway.WebApp.Tests.csproj", "{6EEEE033-285A-43C7-8F88-DB61025D1514}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rockaway.Sandbox", "Rockaway.Sandbox\Rockaway.Sandbox.csproj", "{963781C1-4F33-4758-B4B4-5C6C9C463D6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6EEEE033-285A-43C7-8F88-DB61025D1514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EEEE033-285A-43C7-8F88-DB61025D1514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EEEE033-285A-43C7-8F88-DB61025D1514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{963781C1-4F33-4758-B4B4-5C6C9C463D6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{963781C1-4F33-4758-B4B4-5C6C9C463D6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{963781C1-4F33-4758-B4B4-5C6C9C463D6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{963781C1-4F33-4758-B4B4-5C6C9C463D6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
