@@ -30,10 +30,14 @@ public class RockawayDbContext : DbContext, IDatabaseServerInfo {
 		modelBuilder.Entity<Show>(entity => {
 			entity.HasMany(show => show.SupportSlots).WithOne(slot => slot.Show).OnDelete(DeleteBehavior.Cascade);
 			entity.HasMany(show => show.TicketTypes).WithOne(ticketType => ticketType.Show).OnDelete(DeleteBehavior.Cascade);
+			entity.HasOne(show => show.Venue).WithMany(venue => venue.Shows);
+			entity.HasOne(show => show.HeadlineArtist).WithMany(artist => artist.HeadlineShows);
 			entity.HasKey(
 				nameof(Show.Venue) + nameof(Show.Venue.Id),
 				nameof(Show.Date)
 			);
+			entity.Navigation(show => show.Venue).AutoInclude();
+			entity.Navigation(show => show.HeadlineArtist).AutoInclude();
 		});
 
 		modelBuilder.Entity<Artist>(entity => {

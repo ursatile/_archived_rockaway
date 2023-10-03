@@ -35,4 +35,7 @@ public class Venue {
 
 	[Url]
 	public string? WebsiteUrl { get; set; }
+
+	public List<Show> Shows { get; set; } = new();
+
 }
